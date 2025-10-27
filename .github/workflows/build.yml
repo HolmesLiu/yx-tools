@@ -278,8 +278,8 @@ jobs:
         if: matrix.platform == 'linux' && matrix.arch == 'arm64'
         uses: actions/upload-artifact@v4
         with:
-          name: CloudflareSpeedTest-linux-arm64
-          path: dist/CloudflareSpeedTest-linux-arm64
+          name: CloudflareSpeedTest-${{ matrix.platform }}-${{ matrix.arch }}
+          path: dist/CloudflareSpeedTest-${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.ext }}
 
   # 创建 Release（当推送 tag 时）
   release:
