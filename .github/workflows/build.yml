@@ -273,10 +273,11 @@ jobs:
             CloudflareSpeedTest-Beginner-For-Newbies-${{ matrix.platform }}-${{ matrix.arch }}.zip
             CloudflareSpeedTest-Beginner-For-Newbies-${{ matrix.platform }}-${{ matrix.arch }}.tar.gz
           retention-days: 30
+          
       - name: 上传 ARM64 构建产物
-  if: matrix.platform == 'linux' && matrix.arch == 'arm64'
+        if: matrix.platform == 'linux' && matrix.arch == 'arm64'
         uses: actions/upload-artifact@v4
-      with:
+        with:
           name: CloudflareSpeedTest-linux-arm64
           path: dist/CloudflareSpeedTest-linux-arm64
 
