@@ -36,7 +36,7 @@ jobs:
             ext: ''
             
           # armbian
-          - os: ubuntu-latest
+          - os: ubuntu-22.04-arm64
             platform: linux
             arch: arm64
             ext: ''
